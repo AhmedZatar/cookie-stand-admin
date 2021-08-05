@@ -2,14 +2,14 @@
 
 
 import CookieStandAdmin from '../components/CookieStandAdmin.js';
+import Home from '../components/Home.js';
 
 
-
-export default function Home() {
+export default function Home2() {
 
   return (
-    <div>
-      <CookieStandAdmin/>
-    </div>
+
+      <Home/>
+    
   )
 }
