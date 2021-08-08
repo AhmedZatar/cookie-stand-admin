@@ -1,1 +1,1 @@
-[https://github.com/AhmedZatar/cookie-stand-admin/pull/3](https://github.com/AhmedZatar/cookie-stand-admin/pull/3)
+[https://cookie-stand-admin-rose.vercel.app/](https://cookie-stand-admin-rose.vercel.app/)
