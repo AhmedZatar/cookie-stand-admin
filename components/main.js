@@ -1,12 +1,22 @@
 import { useState } from 'react';
+import { useEffect } from 'react';
 import { working_time } from '../data.js'
 import { If, Else, Then } from 'react-if';
 
 export default function Main(props) {
 
-    const [allData, setAllData] = useState([]);
-    const [totaloftotal, settotaloftotal] = useState(0);
-    const [totalperhour, setTotalperhour] = useState([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]);
+    const [allData, setAllData] = useState(props.dataAPI);
+    const [totaloftotal, settotaloftotal] = useState(props.totaloftotal);
+    const [totalperhour, setTotalperhour] = useState(props.totalperhour);
+    
+    useEffect(()=>{
+        
+        setAllData(props.dataAPI)
+        setTotalperhour(props.totalperhour)
+        settotaloftotal(props.totaloftotal)
+        
+    },[props.dataAPI,props.totalperhour,props.totaloftotal])
+    
     function onCreate(event) {
 
         event.preventDefault()
@@ -62,7 +72,7 @@ export default function Main(props) {
             <CreateForm onCreate={onCreate} />
 
             <ReportTable allData={allData} working_time={working_time} totalperhour={totalperhour} totaloftotal={totaloftotal} />
-
+            
 
         </main>
     );
